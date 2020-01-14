@@ -20,108 +20,6 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="js/smoothScroll.js"></script>
 
-<!--HUMBERGER-->
-    <script type="text/javascript" src="js/common.js"></script>
-
-<!--BGSWITCHER-->
-    <script src="js/jquery.bgswitcher.js"></script>
-    <script>
-        jQuery(function($) {
-            $('.bg-slider').bgSwitcher({
-                images: ['images/HOME_mv.jpg', 'images/HOME_mv02.jpg', 'images/HOME_mv03.jpg'],
-                interval: 3000,
-                loop: true,
-                shuffle: true,
-                effect: "fade",
-                duration: 1500,
-                easing: "linear"
-            });
-        });
-    </script>
-
-<!--BXSLIDER-->
-    <script src="js/jquery.bxslider.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('.bxslider').bxSlider({
-                speed: 1000,
-                slideWidth: 460,
-                loop: true,
-                controls: true,
-                pause: 3500,
-                auto: true
-            });
-        });
-    </script>
-
-
-    <!--TOP PAGE-->
-    <script>
-    $(function(){
-    var pagetop = $('#page_top');
-    // ボタン非表示
-    pagetop.hide();
-
-    // 100px スクロールしたらボタン表示
-    $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-    pagetop.fadeIn();
-    } else {
-    pagetop.fadeOut();
-    }
-    });
-    pagetop.click(function () {
-    $('body, html').animate({ scrollTop: 0 }, 500);
-    return false;
-    });
-    });
-    </script>
-
-    <!--INVIEW-->
-    <script  type="text/javascript" src="js/jquery.inview.min.js"></script>
-<script>
-$(function() {
-$('.effect').css('opacity', 0);
-$('.effect').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
-    if (isInView) {
-        $(this).stop().animate({opacity: 1}, 1000);
-    }
-    else {
-        $(this).stop().animate({opacity: 0}, 800);
-    }
-});
-});
-
-    $(function() {
-  $('.slidein').on('inview', function(event, isInView) {
-    if (isInView) {
-    //表示領域に入った時
-      $(this).addClass('fadeInLeft slow');
-    }
-  });
-    $('.heartbeat').on('inview', function(event, isInView) {
-    if (isInView) {
-    //表示領域に入った時
-      $(this).addClass('heartBeat slow');
-    } else {
-    //表示領域から出た時
-      $(this).removeClass('heartBeat slow');
-      $(this).css('opacity',1); //非表示にしておく
-    }
-  });
-        $('.box1').on('inview', function(event, isInView) {
-            if (isInView) {
-                //表示領域に入った時
-                $(this).addClass('fadeInRight slow');
-            }else {
-                    //表示領域から出た時
-                    $(this).removeClass('fadeInRight');
-                    $(this).css('opacity',0); //非表示にしておく
-                }
-        });
-});
-
-</script>
 
 
 </head>
@@ -296,6 +194,109 @@ $('.effect').on('inview', function(event, isInView, visiblePartX, visiblePartY) 
         </div>
     </main>
 </div>
+    <!--HUMBERGER-->
+    <script type="text/javascript" src="js/common.js"></script>
+
+<!--BGSWITCHER-->
+    <script src="js/jquery.bgswitcher.js"></script>
+    <script>
+        jQuery(function($) {
+            $('.bg-slider').bgSwitcher({
+                images: ['images/HOME_mv.jpg', 'images/HOME_mv02.jpg', 'images/HOME_mv03.jpg'],
+                interval: 3000,
+                loop: true,
+                shuffle: true,
+                effect: "fade",
+                duration: 1500,
+                easing: "linear"
+            });
+        });
+    </script>
+
+<!--BXSLIDER-->
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.bxslider').bxSlider({
+                speed: 1000,
+                slideWidth: 460,
+                loop: true,
+                controls: true,
+                pause: 3500,
+                auto: true
+            });
+        });
+    </script>
+
+
+    <!--TOP PAGE-->
+    <script>
+    $(function(){
+    var pagetop = $('#page_top');
+    // ボタン非表示
+    pagetop.hide();
+
+    // 100px スクロールしたらボタン表示
+    $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+    pagetop.fadeIn();
+    } else {
+    pagetop.fadeOut();
+    }
+    });
+    pagetop.click(function () {
+    $('body, html').animate({ scrollTop: 0 }, 500);
+    return false;
+    });
+    });
+    </script>
+
+    <!--INVIEW-->
+    <script  type="text/javascript" src="js/jquery.inview.min.js"></script>
+<script>
+$(function() {
+$('.effect').css('opacity', 0);
+$('.effect').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
+    if (isInView) {
+        $(this).stop().animate({opacity: 1}, 1000);
+    }
+    else {
+        $(this).stop().animate({opacity: 0}, 800);
+    }
+});
+});
+
+    $(function() {
+  $('.slidein').on('inview', function(event, isInView) {
+    if (isInView) {
+    //表示領域に入った時
+      $(this).addClass('fadeInLeft slow');
+    }
+  });
+    $('.heartbeat').on('inview', function(event, isInView) {
+    if (isInView) {
+    //表示領域に入った時
+      $(this).addClass('heartBeat slow');
+    } else {
+    //表示領域から出た時
+      $(this).removeClass('heartBeat slow');
+      $(this).css('opacity',1); //非表示にしておく
+    }
+  });
+        $('.box1').on('inview', function(event, isInView) {
+            if (isInView) {
+                //表示領域に入った時
+                $(this).addClass('fadeInRight slow');
+            }else {
+                    //表示領域から出た時
+                    $(this).removeClass('fadeInRight');
+                    $(this).css('opacity',0); //非表示にしておく
+                }
+        });
+});
+
+</script>
+
     <!--SLICK-->
     <script src="js/slick.min.js"></script>
     <script type="text/javascript">
